@@ -1,6 +1,11 @@
 import React from 'react'
 import logoNexos from '../../public/img/LogoNexos5.png'
 
+const registerFormFields = {
+  registerName: '',
+  registerEmail: '',
+  registerPassword: ''
+}
 
 export const Register = () => {
   return (
