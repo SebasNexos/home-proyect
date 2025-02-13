@@ -2,7 +2,7 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import logoNexos from "../../public/img/LogoNexos5.png";
 import { useForm } from "../../hooks/useForm";
-import { formValidations } from "../../helpers/validaciones";
+import { formValidations } from "../../helpers/validacionesLogin";
 
 const loginFormFields = {
   loginEmail: "",
