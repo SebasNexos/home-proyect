@@ -7,7 +7,7 @@ function App() {
 
   return (
     <>
-      <div className='h-3xl px-30'>
+      <div className='pt-20'>
         <Table />
       </div>
     </>

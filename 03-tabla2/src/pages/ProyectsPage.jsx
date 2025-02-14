@@ -1,10 +1,10 @@
 import React from 'react';
 import { flexRender } from '@tanstack/react-table';
-import { empleados } from './data';
-import { columns } from './columns';
-import { useTableLogic } from './useTableLogic';
+import { proyectos } from '../helpers/data'; 
+import { columns } from '../helpers/columns';
+import { useTable } from '../hooks/useTable';
 
-export const Table = () => {
+export const ProyectsPage = () => {
   
   const {
     search,
@@ -16,7 +16,7 @@ export const Table = () => {
     totalPages,
     currentPage,
     getPageNumbers
-  } = useTableLogic(empleados, columns);
+  } = useTable(proyectos, columns);
 
 
 
@@ -26,12 +26,12 @@ export const Table = () => {
         <div className="relative w-full sm:w-64">
           <input
             type="text"
-            placeholder="Buscar persona..."
+            placeholder="Buscar proyecto..."
             value={search}
             onChange={handleSearch}
             className="w-full px-4 py-2 border-2 border-orange-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-orange-400"
           />
-          <span className="absolute right-3 top-2.5 text-gray-700">🔍</span>
+          <span className="absolute right-3 top-2.5 text-gray-700"></span>
         </div>
       </div>
 
@@ -62,8 +62,8 @@ export const Table = () => {
                           ✅ Activo
                         </span>
                       ) : (
-                        <span className="px-3 py-1 inline-flex text-xs font-semibold rounded-full bg-red-100 text-red-700 shadow-sm">
-                          ❌ Inactivo
+                        <span className="px-3 py-1 inline-flex text-xs font-semibold rounded-full bg-orange-100 text-orange-700 shadow-sm">
+                          Ø Finalizado
                         </span>
                       )
                     ) : (
@@ -83,7 +83,7 @@ export const Table = () => {
           onChange={(e) => setPageSize(Number(e.target.value))}
           className="px-3 py-2 border border-orange-600 bg-orange-50 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-orange-500"
         >
-          {[5, 10, 20, 30, 50].map((size) => (
+          {[5, 10].map((size) => (
             <option key={size} value={size}>
               {size} registros por página
             </option>
@@ -124,5 +124,7 @@ export const Table = () => {
         </div>
       </div>
     </div>
+
+    
   );
 };

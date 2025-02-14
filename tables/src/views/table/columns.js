@@ -1,6 +1,7 @@
 import { createColumnHelper } from "@tanstack/react-table";
 import { TableCell } from "./TableCell";
 import { EditCell } from "./EditCell";
+import { span } from "framer-motion/client";
 
 const columnHelper = createColumnHelper()
 
@@ -48,7 +49,7 @@ export const columns = [
     
     columnHelper.accessor('estado', {
         header: 'Estado',
-        cell: TableCell, 
+        cell: TableCell,
         meta: {
             type: 'string'
         }
@@ -71,8 +72,9 @@ export const columns = [
         // aqui van las diferentes opciones 
     }), 
 
-    columnHelper.display({
-        id: 'edit',
-        cell: EditCell, 
-    })
+    // configurarlo 
+    //columnHelper.display({
+    //    id: 'edit',
+    //    cell: EditCell, 
+    //})
 ]
