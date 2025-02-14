@@ -28,7 +28,7 @@ export const TableCell = ({ getValue, row, column, table }) => {
                     <option key={option.value} value={option.value}>{option.label}</option>
                 ))}
             </select>
-        ) : (
+        ) : ( 
             <input type="text" value={value} onChange={(e) => setValue(e.target.value)} onBlur={onBlur} />
         ); 
     }
