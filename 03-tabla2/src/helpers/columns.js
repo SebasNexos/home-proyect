@@ -1,5 +1,6 @@
 import { createColumnHelper } from "@tanstack/react-table";
 import { TableCell } from '../components/TableCell';
+import { ModalVista } from '../components/ModalVista'
 
 const columnHelper = createColumnHelper()
 
@@ -14,7 +15,7 @@ export const columns = [
     }),
 
     columnHelper.accessor('nombre', {
-        header: 'Nombre',
+        header: 'Nombre del proyecto',
         cell: TableCell, 
         meta: {
             type: 'string'
@@ -45,12 +46,8 @@ export const columns = [
         }
     }),
     
-    columnHelper.accessor('acciones', {
-        header: 'Acciones',
-        cell: TableCell,
-        meta: {
-            type: 'custom',
-            actions: ['visualizar', 'detalles'] // Indica las acciones que tendrá la columna
-        }
-    })
+    columnHelper.accessor("acciones", {
+        header: "Acciones",
+        cell: ModalVista,
+    }),
 ]

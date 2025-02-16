@@ -21,7 +21,7 @@ export const proyectos = [
   {
     id: 3,
     colaborador: "Carlos Gómez",
-    nombre: "Proyecto C",
+    nombre: "Proyecto sebastian",
     fechaInicio: "2024-02-10",
     fechaFinal: "2024-08-15",
     estado: "Activo",
@@ -30,7 +30,7 @@ export const proyectos = [
   {
     id: 4,
     colaborador: "Ana Ramírez",
-    nombre: "Proyecto D",
+    nombre: "Proyecto roberto",
     fechaInicio: "2023-09-05",
     fechaFinal: "2024-03-30",
     estado: "Finalizado",
@@ -39,7 +39,7 @@ export const proyectos = [
   {
     id: 5,
     colaborador: "Luis Fernández",
-    nombre: "Proyecto E",
+    nombre: "Proyecto de nada",
     fechaInicio: "2024-05-01",
     fechaFinal: "2024-12-31",
     estado: "Finalizado",
