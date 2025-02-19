@@ -19,7 +19,7 @@ export const ProyectsPage = () => {
     getPageNumbers
   } = useTable(proyectos, columns);
 
-  const [selectedRow, setSelectedRow] = useState(null); 
+
 
   return (
     <div className="p-6 bg-white rounded-lg shadow-lg">
